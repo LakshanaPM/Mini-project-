@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+.hotel-listing {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  margin: 0 -20px; /* Optional: to stretch to screen edges */
+  padding: 0 20px;
+}
+
+
+.hotel-card {
+  flex: 0 0 auto; /* Prevent hotel cards from shrinking */
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.hotel-image {
+  position: relative;
+}
+
+.hotel-image img {
+ 
+  display:flex;
+  width:350px;
+  height:380px;
+}
+
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 20px;
+  color: red;
+}
+
+.hotel-details {
+  padding: 15px;
+}
+
+.hotel-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.location {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.amenities, .refund, .rating, .availability {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.refund span {
+  color: #555;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.score {
+  background-color: #1d976c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.total {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.taxes {
+  color: #555;
+  margin-bottom: 8px;
+}
