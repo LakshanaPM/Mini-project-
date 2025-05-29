@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Listings</title>
+  <link rel="stylesheet" href="hotel.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+}
+.hotel-listing {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  margin: 0 -20px; /* Optional: to stretch to screen edges */
+  padding: 0 20px;
+}
+
+
+.hotel-card {
+  flex: 0 0 auto; /* Prevent hotel cards from shrinking */
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.hotel-image {
+  position: relative;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: auto;
+}
+
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 20px;
+  color: red;
+}
+
+.hotel-details {
+  padding: 15px;
+}
+
+.hotel-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.location {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.amenities, .refund, .rating, .availability {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.refund span {
+  color: #555;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.score {
+  background-color: #1d976c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.total {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.taxes {
+  color: #555;
+  margin-bottom: 8px;
+}
+  </style>
+</head>
+<body>
+  <div class="hotel-listing">
+  <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel1.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Le Meridien New Delhi</h2>
+      <p class="location">Chanakyapuri</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">9.4</span> Exceptional • 158 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹12,330 </p>
+      <p class="total">₹14,549 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+  </div>
+   <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel2.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Crowne Plaza Kochi by IHG</h2>
+      <p class="location">Ernakulam</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">8.6</span> Exceptional • 192 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹5,996 </p>
+      <p class="total">₹7,275 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+  </div>
+  <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel3.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Hyatt Regency Trivandrum</h2>
+      <p class="location">Vazhuthacaud</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">9.8</span> Exceptional • 80 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹7,400 </p>
+      <p class="total">₹8,288 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+  </div>
+   <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel4.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Hotel Pearl Palace</h2>
+      <p class="location">Shenoys</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">7.9</span> Exceptional • 257 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹2,147 </p>
+      <p class="total">₹2,404 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+    </div>
+    <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel5.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Hilton Garden Inn Trivandrum</h2>
+      <p class="location">Palayam</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">9.0</span> Exceptional • 262 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹5,260 </p>
+      <p class="total">₹5,891 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+    <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel3.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Hyatt Regency Trivandrum</h2>
+      <p class="location">Vazhuthacaud</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">9.8</span> Exceptional • 80 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹7,400 </p>
+      <p class="total">₹8,288 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+  
+    <div class="hotel-card">
+    <div class="hotel-image">
+      <img src="hotel4.png" alt="Hotel Image">
+      <div class="wishlist">❤️</div>
+    </div>
+    <div class="hotel-details">
+      <h2>Hotel Pearl Palace</h2>
+      <p class="location">Shenoys</p>
+      <!--<p class="amenities">🏊 Pool</p> -->
+      <p class="refund">Fully refundable<br><span>Reserve now, pay later</span></p>
+      <p class="rating"><span class="score">7.9</span> Exceptional • 257 reviews</p>
+      <!--<p class="availability">We have 5 left at</p>-->
+      <p class="price">₹2,147 </p>
+      <p class="total">₹2,404 total</p>
+      <p class="taxes"><h5>includes taxes & fees</h5></p>
+    </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
