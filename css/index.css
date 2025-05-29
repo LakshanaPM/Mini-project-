@@ -1,0 +1,368 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* HEADER SECTION */
+.header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(4, 18, 36, 0.96);
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 100px;
+    width: 150px;
+}
+
+/* NAVIGATION BUTTONS */
+.button-container {
+    display: flex;
+    margin-left: auto;
+}
+
+.button {
+    background-color: inherit;
+    color: rgb(176, 171, 135);
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgba(3, 26, 41, 0.3);
+}
+
+/* CAROUSEL SECTION */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width:1500px;
+    height: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit:cover;
+    
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+/* CAROUSEL NAVIGATION BUTTONS */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    pointer-events: none; /* allow clicks to pass through */
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    pointer-events: auto; /* enable clicks on buttons */
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* DOT INDICATORS */
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+    }
+
+    .carousel-buttons button {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+}
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.carousel-caption h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.carousel-caption p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+header {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .header-actions button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .main-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        .filters {
+            flex: 0 0 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            align-self: flex-start; /* Keeps it at the top */
+        }
+        .filters h3 {
+            margin-top: 0;
+            color: #555;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #666;
+        }
+        .filter-group div {
+            margin-bottom: 5px;
+        }
+        .filter-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .filter-group button {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 0;
+            margin-top: 5px;
+        }
+        .restaurant-list {
+            flex-grow: 1;
+        }
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #666;
+        }
+        .sort-dropdown {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .restaurant-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .restaurant-card-image {
+            flex: 0 0 200px; /* Fixed width for the image container */
+            height: 180px; /* Fixed height for the image container */
+            overflow: hidden; /* Hide overflow from image */
+            position: relative;
+        }
+        .restaurant-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the container without distortion */
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        .restaurant-card-content {
+            flex-grow: 1;
+            padding: 15px 20px;
+        }
+        .restaurant-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .restaurant-card-header h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .restaurant-card-header .distance {
+            font-size: 14px;
+            color: #777;
+        }
+        .restaurant-card-header .bookmark {
+            color: #ccc;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .restaurant-card-header .bookmark.active {
+            color: #ff6347; /* Or a solid heart color */
+        }
+        .restaurant-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .restaurant-rating .stars {
+            color: gold;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+        .restaurant-rating .score {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .restaurant-rating .reviews-count {
+            font-size: 14px;
+            color: #777;
+            margin-left: 5px;
+        }
+        .restaurant-features {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .restaurant-features span {
+            display: flex;
+            align-items: center;
+        }
+        .restaurant-features span::before {
+            content: '• '; /* Bullet point */
+            margin-right: 5px;
+            color: #bbb;
+        }
+        .restaurant-features .price-range {
+            font-weight: bold;
+            color: #008000; /* Green for cost */
+        }
+        .restaurant-features .status {
+            color: #008000;
+        }
+        .restaurant-review-snippet {
+            font-style: italic;
+            color: #555;
+            font-size: 14px;
+            margin-top: 10px;
+            border-left: 2px solid #ddd;
+            padding-left: 10px;
+        }
